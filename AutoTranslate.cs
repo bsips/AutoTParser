@@ -90,7 +90,7 @@ namespace AutoTParser
                 02,
                 lang,
                 (byte)Math.Floor((double)value / 256),
-                (byte)Math.Floor((double)value % 256)
+                (byte)(value % 256)
             };
             uint fullvalue = (uint)BitConverter.ToInt32(b, 0);
             return fullvalue;
@@ -100,7 +100,7 @@ namespace AutoTParser
         {
             byte type = 0x07;
             byte firstbyte = (byte)Math.Floor((double)value / 256);
-            byte secondbyte = (byte)Math.Floor((double)value % 256);
+            byte secondbyte = (byte)(value % 256);
 
             if (firstbyte == 0x00)
             {
