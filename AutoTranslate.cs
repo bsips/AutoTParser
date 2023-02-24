@@ -92,7 +92,7 @@ namespace AutoTParser
                 (byte)Math.Floor((double)value / 256),
                 (byte)(value % 256)
             };
-            uint fullvalue = (uint)BitConverter.ToInt32(b, 0);
+            uint fullvalue = BitConverter.ToUInt32(b, 0);
             return fullvalue;
         }
 
@@ -119,7 +119,7 @@ namespace AutoTParser
                 firstbyte,
                 secondbyte
             };
-            uint fullvalue = (uint)BitConverter.ToInt32(b, 0);
+            uint fullvalue = BitConverter.ToUInt32(b, 0);
             return fullvalue;
         }
 
@@ -146,7 +146,7 @@ namespace AutoTParser
                 firstbyte,
                 secondbyte
             };
-            uint fullvalue = (uint)BitConverter.ToInt32(b, 0);
+            uint fullvalue = BitConverter.ToUInt32(b, 0);
             return fullvalue;
         }
     }
